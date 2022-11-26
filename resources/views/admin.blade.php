@@ -25,97 +25,70 @@
         <!-- Jquery -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased h-full">
-        <nav id="navbar" class="bg-transparent px-[1em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-2.5 absolute w-full top-0 left-0 z-50">
-            <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="/" class="flex items-center">
-                <span class="self-center text-xl whitespace-nowrap dark:text-white font-black">Martinez</span>
-            </a>
-            <div class="flex md:order-2">
-                <button type="button" class="text-white bg-orange-500  font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-400 ease-in-out duration-200">Reserve now</button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">About</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">Services</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">Contact</a>
-                </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-        <div class="fixed right-6 bottom-6 group z-50">
-            <button type="button" class="flex justify-center items-center w-16 h-16 text-orange-500 bg-white rounded-full hover:bg-slate-100 focus:ring-4 hover:font-bold focus:ring-blue-300 focus:outline-none duration-200 ease-in-out drop-shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
-            </svg>
-            </button>
-        </div>
-        <div class="absolute w-full h-full">
-            <div class="hero-section w-full h-0 sticky top-0 px-[1em] xl:px-[11.5em] z-20">
-                <div class="mt-[7em] pt-[4em]">
-                    <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-5xl font-black text-center text-white"><span class="">Admin Panel</h1>
-                </div>
-                <div class="flex justify-center"><div>
-                    </div>
-                </div>
+    <body class="antialiased h-full bg-slate-50">
 
-            </div>
-            <div class="absolute top-0 left-0 w-full h-[70em] bg-cover bg-[url('/public/sky2.jpg')] z-10"></div>
-            <div class="absolute mt-[30em] top-0 left-0 w-full h-[55em] bg-cover bg-[url('/public/martinez-house.png')] z-30"></div>
-        </div>
-        <div id="admin-login-modal" class="fixed inset-0 bg-gray-500 bg-opacity-80 transition-opacity hidden z-50">
-      <div class="fixed inset-0  overflow-y-auto ">
-        <div class="flex min-h-full items-end justify-center p-4 text-left sm:items-center sm:p-0">
-          <form action="./databases/process/post_process.php" method="POST">
-          <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-              <div class="sm:block sm:items-start">
-                <div class="mt-3 text-left sm:mt-0">
-                  <div class="flex items-center justify-between">
-                    <h3 class=" text-lg font-black leading-6 text-black" id="modal-title">Admin Login</h3>
-                    <div>
-                      <button id="admin-login-quit" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-                        </svg>
-                      </button>
+        <aside>
+          <div class="fixed left-6 top-10 group drop-shadow-md z-50">
+            <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
+              <ul class="flex flex-col py-[1em] px-[0.5em] bg-white rounded-md"> 
+                <li class="mt-0.5 w-full">
+                  <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white justify-center px-4 font-semibold text-slate-700 transition-colors" href="./pages/dashboard.html">
+                    <span class="text-lg font-bold text-center">Admin Panel</span>
+                  </a>
+                </li>
+                <li class="mt-[2.5em] w-full">
+                  <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="./pages/dashboard.html">
+                      <div class="overflow-hidden relative w-10 h-10 bg-slate-300 rounded-full mx-auto">
+                        <svg class="absolute -left-1 w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                     </div>
-                  </div>
-                  <hr class="my-4">
-                  <div class="mt-2">
-                      <div class="mb-5">
-                        <label for="discussion-title"><span class="text-md font-extrabold text-black">Username</span></label>
-                        <input type="text" name="Title"  class="form-control w-full my-2 border-2 border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent ease-out duration-100" placeholder="Username..." required>
-                      </div>
-                      <div class="mb-5">
-                        <label for="discussion-title"><span class="text-md font-extrabold text-black">Password</span></label>
-                        <input type="text" name="Title"  class="form-control w-full my-2 border-2 border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent ease-out duration-100" placeholder="Password..." required>
-                      </div>
+                  </a>
+                </li>
+                <li class="mt-0.5 w-full">
+                  <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap justify-center rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="./pages/dashboard.html">
+                    <span class="mt-1 text-md font-semibold text-center">$nama_admin</span>
+                  </a>
+                </li>
+                <li class="mt-[1.5em] w-full">
+                  <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/tables.html">
+                    <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                      <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                      <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                    </svg>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-extrabold text-white shadow-sm focus:outline-none focus:ring-2 sm:ml-3 sm:w-auto sm:text-sm">Login</button>
-              </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+                  </a>
+                </li>
+  
+                <li class="mt-0.5 w-full">
+                  <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/billing.html">
+                    <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
+                      <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>credit-card</title>
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                            <g transform="translate(1716.000000, 291.000000)">
+                              <g transform="translate(453.000000, 454.000000)">
+                                <path class="fill-slate-800 opacity-60" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"></path>
+                                <path class="fill-slate-800" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Billing</span>
+                  </a>
+                </li>
+  
+
+              </ul>
             </div>
-          </form>
           </div>
-        </div>
-      </div>
+        </aside>
+        <div class="fixed right-6 top-40 group drop-shadow-md z-50">
+          
+        </div
     </body>
     <script type="module">
         $(window).scroll(function() {
