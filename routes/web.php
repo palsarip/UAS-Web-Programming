@@ -21,6 +21,6 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/admin', function () {
+Route::get('/admin-dashboard', function () {
     return view('admin');
 });
