@@ -63,6 +63,10 @@
             </svg>
             </button>
         </div>
+        <div class="relative">
+            <div class="absolute top-0 w-full h-[30em] sm:h-[50em] md:h-[55em] lg:h-[70em] bg-cover bg-no-repeat bg-center bg-[url('/public/sky2.jpg')] z-10"></div>
+                <div class="absolute mt-[25em] top-0 w-full h-[55em] bg-contain bg-no-repeat bg-bottom xl:bg-cover bg-[url('/public/martinez-house.png')] z-30"></div>
+        </div>
         <div class="absolute w-full h-full">
             <div class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-20">
                 <div class="mt-[7em] pt-[4em]">
@@ -113,13 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute top-0 w-full h-[41.5em] sm:h-[50em] md:h-[55em] lg:h-[70em] bg-cover bg-[url('/public/sky2.jpg')] z-10"></div>
-            <div class="absolute top-0 mt-[30em] w-full h-[55em] bg-contain bg-no-repeat xl:bg-cover bg-[url('/public/martinez-house.png')] z-30"></div>
-        </div>
-        <div class="bg-white w-full h-[150em]">
-            tes
-        </div>
-        <div id="admin-login-modal" class="fixed inset-0 bg-gray-700 bg-opacity-80 transition-opacity hidden z-50">
+                    <div id="admin-login-modal" class="fixed inset-0 bg-gray-700 bg-opacity-80 transition-opacity hidden z-50">
       <div class="fixed inset-0 overflow-y-auto ">
         <div class="flex min-h-full justify-center p-0 text-left items-center">
           <form action="./admin">
@@ -161,7 +159,10 @@
           </div>
         </div>
       </div>
-      <div class="">
+           
+        </div>
+        <!-- <div class="w-full lg:h-[175em] xl:h-[85em]"></div> -->
+        <!-- <div class="mt-[30em]">tes</div> -->
     </body>
     <script type="module">
         $(window).scroll(function() {
