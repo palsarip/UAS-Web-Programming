@@ -63,11 +63,10 @@
             </svg>
             </button>
         </div>
-        <div class="relative">
-            <div class="absolute top-0 w-full h-[30em] sm:h-[50em] md:h-[55em] lg:h-[70em] bg-cover bg-no-repeat bg-center bg-[url('/public/sky2.jpg')] z-10"></div>
-                <div class="absolute mt-[25em] top-0 w-full h-[55em] bg-contain bg-no-repeat bg-bottom xl:bg-cover bg-[url('/public/martinez-house.png')] z-30"></div>
-        </div>
-        <div class="absolute w-full h-full">
+        <section class="relative w-full h-[110vh] md:h-[135vw] lg:h-[165vh] xl:h-[200vh]"></section>
+        <div class="absolute top-0 left-0 w-full h-[100vh] md:h-[135vw] lg:h-[165vh] xl:h-[200vh] bg-cover z-10 bg-[url('/public/sky2.jpg')]"></div>
+        <div class="absolute mt-[10vh] md:mt-[35vw] lg:mt-[65vh] xl:mt-[75vh] top-0 left-0 w-full h-[100vh] lg:h-[100vh] xl:h-[125vh] bg-contain bg-no-repeat bg-bottom xl:bg-cover z-30 bg-[url('/public/martinez-house.png')]"></div>
+        <div class="absolute top-0 w-full h-full">
             <div class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-20">
                 <div class="mt-[7em] pt-[4em]">
                     <h1 class="xl:text-7xl lg:text-5xl md:text-5xl text-5xl font-black text-center text-white"><span class="">Martinez</span> swimming pool</h1>
@@ -79,7 +78,7 @@
                     </div>
                 </div>
                 <div class="maxW-full mx-auto w-auto md:w-[35em] lg:w-[35em] xl:w-[42.5em] h-full">
-                    <div class="flex justify-between content-center px-[1em] py-[1em] bg-white rounded-full">
+                    <div class="flex justify-between content-center p-2 md:px-[1em] md:py-[1em] bg-white rounded-full">
                         <div class="ml-[1em] block my-auto justify-between">
                             <div class="flex mb-0">
                                
@@ -159,10 +158,10 @@
           </div>
         </div>
       </div>
-           
-        </div>
-        <!-- <div class="w-full lg:h-[175em] xl:h-[85em]"></div> -->
-        <!-- <div class="mt-[30em]">tes</div> -->
+    </div>
+    <div class="my-[3em] mx-[15em]">
+        <div class="text-4xl text-center font-semibold italic">"Compact Home & Modern Architecture with Serene Nature Environment"</div>
+    </div>
     </body>
     <script type="module">
         $(window).scroll(function() {
