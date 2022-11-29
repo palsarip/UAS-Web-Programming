@@ -26,13 +26,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased h-full">
-        <nav id="navbar" class="bg-transparent px-[1em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-2.5 absolute w-full top-0 left-0 z-50">
+        <nav id="navbar" class="bg-transparent px-[1em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-2.5 absolute w-full top-0 left-0 ease-in-out duration-500 z-50">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="/" class="flex items-center">
                 <span class="self-center text-xl whitespace-nowrap dark:text-white font-black">Martinez</span>
             </a>
             <div class="flex md:order-2">
-                <button type="button" class="text-white bg-orange-500  font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-400 ease-in-out duration-200">Reserve now</button>
+                <button id="reserve-button" type="button" class="hidden text-white bg-orange-500 font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-slate-200 ease-in-out duration-200">Reserve now</button>
                     <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -63,10 +63,10 @@
             </svg>
             </button>
         </div>
-        <section class="relative w-full h-[110vh] md:h-[135vw] lg:h-[165vh] xl:h-[200vh]"></section>
-        <div class="absolute top-0 left-0 w-full h-[100vh] md:h-[135vw] lg:h-[165vh] xl:h-[200vh] bg-cover z-10 bg-[url('/public/sky2.jpg')]"></div>
-        <div class="absolute mt-[10vh] md:mt-[35vw] lg:mt-[65vh] xl:mt-[75vh] top-0 left-0 w-full h-[100vh] lg:h-[100vh] xl:h-[125vh] bg-contain bg-no-repeat bg-bottom xl:bg-cover z-30 bg-[url('/public/martinez-house.png')]"></div>
-        <div class="absolute top-0 w-full h-full">
+        <section class="relative w-full h-[110vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh]"></section>
+        <div class="absolute top-0 left-0 w-full h-[100vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh] bg-cover z-10 bg-[url('/public/sky2.jpg')]"></div>
+        <div class="absolute mt-[10vh] md:mt-[35vw] lg:mt-[65vh] xl:mt-[80vh] top-0 left-0 w-full h-[100vh] md:h-[100vw] lg:h-[100vh] xl:h-[135vh] bg-contain bg-no-repeat bg-bottom lg:bg-cover z-30 bg-[url('/public/martinez-house.png')]"></div>
+        <div class="absolute top-0 w-full h-full mt-[2em]">
             <div class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-20">
                 <div class="mt-[7em] pt-[4em]">
                     <h1 class="xl:text-7xl lg:text-5xl md:text-5xl text-5xl font-black text-center text-white"><span class="">Martinez</span> swimming pool</h1>
@@ -159,16 +159,32 @@
         </div>
       </div>
     </div>
-    <div class="my-[3em] mx-[15em]">
-        <div class="text-4xl text-center font-semibold italic">"Compact Home & Modern Architecture with Serene Nature Environment"</div>
-    </div>
+        <div class="my-[3em] mx-[15em]">
+            <div class="text-4xl text-center font-semibold italic">"Compact Home & Modern Architecture with Serene Nature Environment"</div>
+        </div>
     </body>
     <script type="module">
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                $('#navbar').addClass('backdrop-blur-md');
+            if ($(this).scrollTop() > 800) {
+                $('#navbar').addClass('bg-orange-500');
+                $('#navbar').addClass('fixed');
+                $('#navbar').addClass('top-0');
+                $('#navbar').removeClass('absolute');
+                $('#reserve-button').removeClass('bg-orange-500');
+                $('#reserve-button').addClass('bg-white');
+                $('#reserve-button').removeClass('text-white');
+                $('#reserve-button').addClass('text-orange-500');
+                $('#reserve-button').removeClass('hidden');
             } else {
-                $('#navbar').removeClass('backdrop-blur-md');
+                $('#navbar').removeClass('bg-orange-500');
+                $('#navbar').removeClass('fixed');
+                $('#navbar').removeClass('top-0');
+                $('#navbar').addClass('absolute');
+                $('#reserve-button').addClass('bg-orange-500');
+                $('#reserve-button').removeClass('bg-white');
+                $('#reserve-button').addClass('text-white');
+                $('#reserve-button').removeClass('text-orange-500');
+                $('#reserve-button').addClass('hidden');
             }
         });
         $(document).on('keypress', function(e) {
