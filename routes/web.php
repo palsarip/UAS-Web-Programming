@@ -32,13 +32,3 @@ Route::get('/admin', function () {
 Route::resource('/reservations', ReservationController::class);
 
 // Route::resource('/authentication', AuthController::class);
-
-Auth::routes(['login' => false, 'register' => false]);
-
-Route::middleware(('guest'))->group(function () {
-    Route::get('/login', Login::class)->name('login');
-    // Route::post('/login', [AuthController::class, 'store']);
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Auth::routes()
