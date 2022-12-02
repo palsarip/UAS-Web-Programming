@@ -34,15 +34,17 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $reservation = new Reservation();
-        $reservation->nama = $request->nama;
-        $reservation->alamat = $request->alamat;
-        $reservation->tanggal_reservasi = $request->tanggal_reservasi;
-        $reservation->jam_reservasi_mulai = $request->jam_reservasi_mulai;
-        $reservation->jam_reservasi_selesai = $request->jam_reservasi_selesai;
-        $reservation->save();
-        return redirect('/');
+    { 
+
+        Reservation::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'tanggal_reservasi' => $request->tanggal_reservasi,
+            'jam_reservasi_mulai' => $request->jam_reservasi_mulai,
+            'jam_reservasi_selesai' => $request->jam_reservasi_selesai
+        ]);
+
+        return redirect('/')->with('success', 'Reservation created successfully');
     }
 
     /**

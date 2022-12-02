@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\ReservationController;
-use App\Http\Livewire\Auth\Login;
-// use App\Http\Controllers\AuthController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +27,13 @@ Route::get('/admin', function () {
     return view('/admin/index');
 });
 
+
 Route::resource('/reservations', ReservationController::class);
+
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('admin/dashboard', [AdminController::class, 'dashboard']);
+Route::post('/admin/login', [AdminController::class, 'login']);
+Route::get('/admin/logout', [AdminController::class, 'logout']);
+// Route::post('/login', [AdminController::class, 'index']);
 
 // Route::resource('/authentication', AuthController::class);
