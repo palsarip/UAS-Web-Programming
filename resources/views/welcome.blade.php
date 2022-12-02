@@ -254,7 +254,7 @@
                     e.preventDefault();
                     // $('#admin-login-modal').show();
                     // $("body").addClass("overflow-hidden");
-                    location.href="/login"
+                    location.href="/admin"
                 }
             });
             $(document).on('click', '#admin-login-quit', function(e) {

@@ -26,8 +26,44 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased h-full bg-slate-50">
+    <nav id="navbar" class="flex lg:hidden bg-white px-[1.5em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-[1em] md:py-2.5 fixed w-full top-0 left-0 ease-in-out duration-500 z-50 shadow-md">
+                <div class="container flex flex-wrap items-center justify-between mx-auto">
+                <a href="/" class="flex items-center">
+                    <span class="self-center text-xl whitespace-nowrap text-orange-500 font-black">Admin Panel</span>
+                </a>
+                <div class="flex md:order-2">
+                    <button id="reserve-button"  type="button" class="hidden md:flex text-white bg-red-500  font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-slate-200 ease-in-out duration-200" data-bs-toggle="modal" data-bs-target="#reserve-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                        <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                    </svg>Logout</button>
+                        <button data-collapse-toggle="navbar-sticky" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" type="button" class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-6 h-6 text-orange-500 md:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-orange-500 rounded md:bg-transparent md:p-0 text-lg" aria-current="page">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-orange-500  rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">History</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header flex items-center justify-between p-4">
+                    <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
+                    ...
+                </div>
+            </div>
         <aside>
-          <div class="fixed left-6 top-10 group drop-shadow-md z-50">
+          <div class="hidden lg:block w-auto fixed left-6 top-10 group drop-shadow-md z-50">
             <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
               <ul class="flex flex-col py-[1em] px-[0.75em] bg-white rounded-lg"> 
                 <li class="mt-0.5 w-full">
@@ -44,7 +80,7 @@
                 </li>
                 <li class="mt-0.5 w-full">
                   <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap justify-center rounded-lg bg-white px-4 font-semibold text-black transition-colors" href="./pages/dashboard.html">
-                    <span class="mt-1 text-md font-semibold text-center">$nama_admin</span>
+                    <span class="mt-2 text-md font-semibold text-center">{{Auth::user()->name}}</span>
                   </a>
                 </li>
                 <li class="mt-[1.5em] w-full p-1 mb-[0.75em] hover:bg-slate-100 rounded">
@@ -73,7 +109,7 @@
                     <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-lgbg-center stroke-0 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                         <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                        </svg>
+                    </svg>
                     </div>
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Logout</span>
                   </a>
@@ -107,13 +143,10 @@
             </div>
         </div>
         </div>
-        <div class="flex my-[2.5em]">
-          <div class="md:w-[22em] lg:w-[19em] xl:w-[17em]"></div>
-            <div class=" w-full h-[full] mx-[2em] bg-white drop-shadow-md rounded-xl z-50">
+        <div class="flex my-[1em] mt-[6em] md:mt-[7.5em] lg:my-[2.5em] lg:ml-[15.85em] mx-[2em]">
+            <div class=" w-full h-[full] bg-white drop-shadow-md rounded-xl">
               <div class="m-[2em]">
-                <div>
-                    @yield('content')
-                </div>
+                @yield('content')
               </div>
             </div>
         </div>

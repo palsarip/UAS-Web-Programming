@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\Reservation;
 
 class AdminController extends Controller
 {
@@ -18,6 +19,8 @@ class AdminController extends Controller
     
     function dashboard(){
         if(Auth::check()){
+            $reservations = Reservation::all();
+            return view('admin/dashboard')->with('reservations', $reservations);
             return view('admin/dashboard');
         }else{
             return redirect('admin')->with('errors', "You must be logged in to access this page");
@@ -40,7 +43,7 @@ class AdminController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-            return redirect('admin/dashboard')->with('success', 'Login successful');
+            return redirect('admin/dashboard')->with('success', 'Welcome, ' . Auth::user()->name);
         } else {
             return back()->with('errors', 'Username or password is incorrect');
         }
@@ -49,6 +52,26 @@ class AdminController extends Controller
     function logout(){
         Auth::logout();
         return redirect('admin')->with('success', 'Logout successful');
+    }
+
+    function approved($id){
+        $reservation = Reservation::find($id);
+        $reservation->status = 1;
+        $reservation->save();
+        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been approved');
+    }
+
+    function rejected($id){
+        $reservation = Reservation::find($id);
+        $reservation->status = 2;
+        $reservation->save();
+        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been rejected');
+    }
+
+    function delete($id){
+        $reservation = Reservation::find($id);
+        $reservation->delete();
+        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been deleted');
     }
 }
 

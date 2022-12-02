@@ -14,6 +14,7 @@ class Reservation extends Model
         'jam_reservasi_mulai',
         'jam_reservasi_selesai'
     ];
-    
+
+    protected $table = 'reservations';
     use HasFactory;
 }

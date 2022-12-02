@@ -30,10 +30,14 @@ Route::get('/admin', function () {
 
 Route::resource('/reservations', ReservationController::class);
 
+
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('admin/dashboard', [AdminController::class, 'dashboard']);
 Route::post('/admin/login', [AdminController::class, 'login']);
 Route::get('/admin/logout', [AdminController::class, 'logout']);
+Route::post('/admin/dashboard/approved/{id}', [AdminController::class, 'approved']);
+Route::post('/admin/dashboard/rejected/{id}', [AdminController::class, 'rejected']);
+Route::post('/admin/dashboard/delete/{id}', [AdminController::class, 'delete']);
 // Route::post('/login', [AdminController::class, 'index']);
 
 // Route::resource('/authentication', AuthController::class);
