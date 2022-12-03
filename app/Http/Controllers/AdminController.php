@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\Reservation;
+use App\Models\History;
 
 class AdminController extends Controller
 {
@@ -32,6 +33,26 @@ class AdminController extends Controller
             $reservations = Reservation::all();
             return view('admin/reservations')->with('reservations', $reservations);
             return view('admin/reservations');
+        }else{
+            return redirect('admin')->with('errors', "You must be logged in to access this page");
+        }
+    }
+
+    function checks(){
+        if(Auth::check()){
+            $reservations = Reservation::all();
+            return view('admin/checks')->with('reservations', $reservations);
+            return view('admin/checks');
+        }else{
+            return redirect('admin')->with('errors', "You must be logged in to access this page");
+        }
+    }
+
+    function history(){
+        if(Auth::check()){
+            $history = History::all();
+            return view('admin/history')->with('history', $history);
+            return view('admin/history');
         }else{
             return redirect('admin')->with('errors', "You must be logged in to access this page");
         }

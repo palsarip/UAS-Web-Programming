@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        return view('reservations.create');
+        return view('reservations.create') && view('history.create');
     }
 
     /**
@@ -38,6 +39,14 @@ class ReservationController extends Controller
     { 
 
         Reservation::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'tanggal_reservasi' => $request->tanggal_reservasi,
+            'jam_reservasi_mulai' => $request->jam_reservasi_mulai,
+            'jam_reservasi_selesai' => $request->jam_reservasi_selesai
+        ]);
+
+        History::create([
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'tanggal_reservasi' => $request->tanggal_reservasi,
@@ -82,7 +91,12 @@ class ReservationController extends Controller
         $name = $reservation->nama;
         $reservation->status = 1;
         $reservation->save();
-        return redirect('admin/dashboard')->with('success',  $name . ' reservation approved successfully');
+
+        $history = History::find($id);
+        $history->status = 1;
+        $history->save();
+
+        return redirect('admin/reservations')->with('success',  $name . ' reservation approved successfully');
     }
 
     /**
@@ -98,7 +112,12 @@ class ReservationController extends Controller
         $name = $reservation->nama;
         $reservation->status = 2;
         $reservation->save();
-        return redirect('admin/dashboard')->with('success',  $name . ' reservation rejected successfully');
+    
+        $history = History::find($id);
+        $history->status = 2;
+        $history->save();
+        
+        return redirect('admin/reservations')->with('success',  $name . ' reservation rejected successfully');
     }
 
     /**
@@ -113,8 +132,31 @@ class ReservationController extends Controller
         $reservation = Reservation::find($id);
         $name = $reservation->nama;
         $reservation->waktu_checkin = now();
+        $reservation->status = 3;
         $reservation->save();
-        return redirect('admin/dashboard')->with('success',  $name . ' reservation rejected successfully');
+        
+        $history = History::find($id);
+        $history->waktu_checkin = now();
+        $history->status = 3;
+        $history->save();
+        
+        return redirect('admin/checks')->with('success',  $name . ' has been checked in');
+    }
+
+    public function checkout(Request $request, $id)
+    {
+        $reservation = Reservation::find($id);
+        $name = $reservation->nama;
+        $reservation->waktu_checkout = now();
+        $reservation->status = 4;
+        $reservation->save();
+        
+        $history = History::find($id);
+        $history->waktu_checkout = now();
+        $history->status = 4;
+        $history->save();
+        
+        return redirect('admin/checks')->with('success',  $name . ' has been checked out');
     }
 
     /**
@@ -128,6 +170,6 @@ class ReservationController extends Controller
         $reservation = Reservation::find($id);
         $name = $reservation->nama;
         $reservation->delete();
-        return redirect('/admin/dashboard')->with('success', $name . ' reservation deleted successfully');
+        return redirect('admin/reservations')->with('success', $name . ' reservation deleted successfully');
     }
 }
