@@ -76,9 +76,45 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function approved(Request $request, $id)
     {
-        //
+        $reservation = Reservation::find($id);
+        $name = $reservation->nama;
+        $reservation->status = 1;
+        $reservation->save();
+        return redirect('admin/dashboard')->with('success',  $name . ' reservation approved successfully');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function rejected(Request $request, $id)
+    {
+        $reservation = Reservation::find($id);
+        $name = $reservation->nama;
+        $reservation->status = 2;
+        $reservation->save();
+        return redirect('admin/dashboard')->with('success',  $name . ' reservation rejected successfully');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function checkin(Request $request, $id)
+    {
+        $reservation = Reservation::find($id);
+        $name = $reservation->nama;
+        $reservation->waktu_checkin = now();
+        $reservation->save();
+        return redirect('admin/dashboard')->with('success',  $name . ' reservation rejected successfully');
     }
 
     /**
@@ -89,6 +125,9 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reservation = Reservation::find($id);
+        $name = $reservation->nama;
+        $reservation->delete();
+        return redirect('/admin/dashboard')->with('success', $name . ' reservation deleted successfully');
     }
 }

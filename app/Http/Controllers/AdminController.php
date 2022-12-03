@@ -27,6 +27,16 @@ class AdminController extends Controller
         }
     }
 
+    function reservations(){
+        if(Auth::check()){
+            $reservations = Reservation::all();
+            return view('admin/reservations')->with('reservations', $reservations);
+            return view('admin/reservations');
+        }else{
+            return redirect('admin')->with('errors', "You must be logged in to access this page");
+        }
+    }
+
     function login(Request $request){
         Session::flash('username', $request->username);
         $request->validate([
@@ -58,20 +68,20 @@ class AdminController extends Controller
         $reservation = Reservation::find($id);
         $reservation->status = 1;
         $reservation->save();
-        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been approved');
+        return redirect('admin/reservations')->with('success', 'Reservation from' . $reservation->nama . ' has been approved');
     }
 
     function rejected($id){
         $reservation = Reservation::find($id);
         $reservation->status = 2;
         $reservation->save();
-        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been rejected');
+        return redirect('admin/reservations')->with('success', 'Reservation from' . $reservation->nama . ' has been rejected');
     }
 
-    function delete($id){
+    function destroy($id){
         $reservation = Reservation::find($id);
         $reservation->delete();
-        return redirect('admin/dashboard')->with('success', 'Reservation from' . $reservation->nama . ' has been deleted');
+        return redirect('admin/reservations')->with('success', 'Reservation from' . $reservation->nama . ' has been deleted');
     }
 }
 

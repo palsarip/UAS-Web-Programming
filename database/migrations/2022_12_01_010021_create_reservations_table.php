@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->char('alamat', 3);
-            $table->timestamp('waktu_checkin');
+            $table->dateTime('waktu_checkin')->default('1111-11-11 00:00:00');
             $table->boolean('status')->default(false);
             $table->date('tanggal_reservasi');
             $table->time('jam_reservasi_mulai');

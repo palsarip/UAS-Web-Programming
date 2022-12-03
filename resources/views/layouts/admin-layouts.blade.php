@@ -98,6 +98,16 @@
                   <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
                     <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd" />
+                    </svg>
+                    </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Reservations</span>
+                  </a>
+                </li>
+                <li class="w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
+                  <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
+                    <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                       <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
                     </svg>
                     </div>
@@ -119,33 +129,33 @@
           </div>
         </aside>
         <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="logout-modal" tabindex="-1" aria-modal="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
-            <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
-            <div class="modal-header flex flex-shrink-0 items-center justify-center p-4 border-none border- rounded-t-md">
-                <h5 class="text-xl text-center font-medium leading-normal text-black">
-                Are you sure want to logout?
-                </h5>
-            </div>
-            <div
-                class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-center p-4 border-t border-gray-200 rounded-b-md">
-                <button type="button"
-                class="inline-block px-6 py-2.5 bg-white border-2 border-red-500 text-red-500 font-black text-xs leading-tight uppercase rounded hover:bg-red-500 hover:text-white focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800  active:shadow-lg transition duration-150 ease-in-out"
-                data-bs-dismiss="modal">
-                No
-                </button>
-                <a href="logout">
-                    <button type="button"
-                    class="inline-block px-6 py-2.5 bg-orange-500 text-white font-black text-xs leading-tight uppercase rounded  hover:bg-orange-600 hover:shadow-lg focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800  transition duration-150 ease-in-out ml-1">
-                    Yes
-                    </button>
-                </a>
-            </div>
-            </div>
-        </div>
+          <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+              <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+              <div class="modal-header flex flex-shrink-0 items-center justify-center p-4 border-none border- rounded-t-md">
+                  <h5 class="text-xl text-center font-medium leading-normal text-black">
+                  Are you sure want to logout?
+                  </h5>
+              </div>
+              <div
+                  class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-center p-4 border-t border-gray-200 rounded-b-md">
+                  <button type="button"
+                  class="inline-block px-6 py-2.5 bg-white border-2 border-red-500 text-red-500 font-black text-xs leading-tight uppercase rounded hover:bg-red-500 hover:text-white focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800  active:shadow-lg transition duration-150 ease-in-out"
+                  data-bs-dismiss="modal">
+                  No
+                  </button>
+                  <a href="logout">
+                      <button type="button"
+                      class="inline-block px-6 py-2.5 bg-orange-500 text-white font-black text-xs leading-tight uppercase rounded  hover:bg-orange-600 hover:shadow-lg focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800  transition duration-150 ease-in-out ml-1">
+                      Yes
+                      </button>
+                  </a>
+              </div>
+              </div>
+          </div>
         </div>
         <div class="flex my-[1em] mt-[6em] md:mt-[7.5em] lg:my-[2.5em] lg:ml-[15.85em] mx-[2em]">
             <div class=" w-full h-[full] bg-white drop-shadow-md rounded-xl">
-              <div class="m-[2em]">
+              <div class="m-[2em] ">
                 @yield('content')
               </div>
             </div>
