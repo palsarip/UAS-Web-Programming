@@ -84,35 +84,69 @@
                   </a>
                 </li>
                 <li class="mt-[1.5em] w-full p-1 mb-[0.75em] hover:bg-slate-100 rounded">
-                  <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
-                    <div class="shadow-soft-2xl mr-1 flex items-center justify-center stroke-0 text-center ">
+                  @if(Route::is('admin.dashboard'))
+                    <a href="dashboard" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center stroke-0 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                          <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                          <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                        </svg>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+                    </a>
+                    @else
+                    <a href="dashboard" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center stroke-0 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                          <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                          <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                        </svg>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+                    </a>
+                  @endif
+                </li>
+                <li class="w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
+                  @if(Route::is('admin.reservations'))
+                    <a href="reservations" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                        <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd" />
                       </svg>
-                    </div>
-                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
-                  </a>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Reservations</span>
+                    </a>
+                  @else
+                  <a href="reservations" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd" />
+                      </svg>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Reservations</span>
+                    </a>
+                  @endif
                 </li>
                 <li class="w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
-                  <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
-                    <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                      <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd" />
-                    </svg>
-                    </div>
-                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Reservations</span>
-                  </a>
-                </li>
-                <li class="w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
-                  <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
-                    <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                      <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
-                    </svg>
-                    </div>
-                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">History</span>
-                  </a>
+                  @if(Route::is('admin.history'))
+                    <a href="dashboard" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                      </svg>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">History</span>
+                    </a>
+                  @else
+                  <a href="dashboard" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-gray-400 cursor-pointer">
+                      <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                      </svg>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">History</span>
+                    </a>
+                  @endif
                 </li>
                 <li class="w-full p-1 mt-[2em] hover:bg-slate-100 rounded cursor-pointer">
                   <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-red-500" data-bs-toggle="modal" data-bs-target="#logout-modal">

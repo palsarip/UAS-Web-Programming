@@ -37,7 +37,9 @@ Route::post('/admin/dashboard/delete/{id}', [ReservationController::class, 'dest
 
 
 Route::get('/admin', [AdminController::class, 'index']);
-Route::get('admin/reservations', [AdminController::class, 'reservations']);
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('admin/reservations', [AdminController::class, 'reservations'])->name('admin.reservations');
+Route::post('admin/history', [AdminController::class, 'login'])->name('admin.history')->name('admin.history');
 Route::post('/admin/login', [AdminController::class, 'login']);
 Route::get('/admin/logout', [AdminController::class, 'logout']);
 Route::post('/admin/dashboard/approved/{id}', [AdminController::class, 'approved']);
