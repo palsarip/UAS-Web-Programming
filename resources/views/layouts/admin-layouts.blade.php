@@ -32,34 +32,60 @@
                     <span class="self-center text-xl whitespace-nowrap text-orange-500 font-black">Admin Panel</span>
                 </a>
                 <div class="flex md:order-2">
-                    <button id="reserve-button"  type="button" class="hidden md:flex text-white bg-red-500  font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-slate-200 ease-in-out duration-200" data-bs-toggle="modal" data-bs-target="#reserve-modal">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                        <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                    </svg>Logout</button>
-                        <button data-collapse-toggle="navbar-sticky" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" type="button" class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-6 h-6 text-orange-500 md:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
-                        <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-orange-500 rounded md:bg-transparent md:p-0 text-lg" aria-current="page">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-orange-500  rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">History</a>
-                        </li>
-                    </ul>
+                  <button data-collapse-toggle="navbar-sticky" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" type="button" class="inline-flex items-center my-0 lg:my-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                      <svg class="w-6 h-6 text-orange-500 " aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                  </button>
                 </div>
                 </div>
             </nav>
             <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header flex items-center justify-between p-4">
-                    <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <h5 class="offcanvas-title mb-0 leading-normal text-lg font-bold text-orange-500" id="offcanvasRightLabel">Admin Panel</h5>
                     <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-                    ...
+                    <div class="w-full h-auto block mt-[1em]">
+                      @if(Route::is('admin.dashboard'))
+                        <a href="dashboard">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Dashboard</button>
+                        </a>
+                      @else
+                        <a href="dashboard">
+                            <button class="w-full h-auto flex justify-center py-2 text-gray-400 text-xl font-semibold">Dashboard</button>
+                        </a>
+                      @endif
+                      @if(Route::is('admin.reservations'))
+                        <a href="reservations">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Reservations</button>
+                        </a>
+                      @else
+                        <a href="reservations">
+                            <button class="w-full h-auto flex justify-center py-2 text-gray-400 text-xl font-semibold">Reservations</button>
+                        </a>
+                      @endif
+                      @if(Route::is('admin.checks'))
+                        <a href="checks">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Checks</button>
+                        </a>
+                      @else
+                        <a href="checks">
+                            <button class="w-full h-auto flex justify-center py-2 text-gray-400 text-xl font-semibold">Checks</button>
+                        </a>
+                      @endif
+                      @if(Route::is('admin.history'))
+                        <a href="history">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">History</button>
+                        </a>
+                      @else
+                        <a href="history">
+                            <button class="w-full h-auto flex justify-center py-2 text-gray-400 text-xl font-semibold">History</button>
+                        </a>
+                      @endif
+                        <a data-bs-toggle="modal" data-bs-target="#logout-modal">
+                            <button class="absolute bottom-0 left-0 right-0 mb-[3.5vh] w-full h-auto flex justify-center py-2 text-red-500 text-xl font-semibold">Logout</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         <aside>
@@ -169,7 +195,7 @@
                     </a>
                   @endif
                 </li>
-                <li class="w-full p-1 mt-[2em] hover:bg-slate-100 rounded cursor-pointer">
+                <li class="w-full p-1 mt-[2.5em] hover:bg-slate-100 rounded cursor-pointer">
                   <a class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-red-500" data-bs-toggle="modal" data-bs-target="#logout-modal">
                     <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-lgbg-center stroke-0 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
@@ -208,7 +234,7 @@
               </div>
           </div>
         </div>
-        <div class="flex my-[1em] mt-[6em] md:mt-[7.5em] lg:my-[2.5em] lg:ml-[15.85em] mx-[2em]">
+        <div class="flex my-[1em] mt-[6em] md:mt-[7.5em] lg:my-[2.5em] lg:ml-[15.85em] mx-[1em] lg:mx-[2em]">
             <div class=" w-full h-[full] bg-white drop-shadow-md rounded-xl">
               <div class="m-[2em] ">
                 @yield('content')

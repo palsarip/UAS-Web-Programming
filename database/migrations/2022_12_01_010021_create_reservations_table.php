@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->char('alamat', 3);
-            $table->dateTime('waktu_checkin')->default('1111-11-11 00:00:00');
-            $table->dateTime('waktu_checkout')->default('1111-11-11 00:00:00');
+            $table->dateTime('waktu_checkin')->nullable();
+            $table->dateTime('waktu_checkout')->nullable();
             $table->boolean('status')->default(false);
             $table->date('tanggal_reservasi');
             $table->time('jam_reservasi_mulai');

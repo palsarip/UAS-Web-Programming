@@ -4,6 +4,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Reservation;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $reservations = Reservation::all();
+    return view('welcome')->with('reservations', $reservations);
 });
 
 Route::get('/test', function () {

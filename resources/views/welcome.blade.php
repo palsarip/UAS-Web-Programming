@@ -3,8 +3,8 @@
     <body class="antialiased h-full">
             <nav id="navbar" class="bg-transparent px-[1.5em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-2.5 absolute w-full top-0 left-0 ease-in-out duration-500 z-50">
                 <div class="container flex flex-wrap items-center justify-between mx-auto">
-                <a href="/" class="flex items-center">
-                    <span class="self-center text-xl whitespace-nowrap dark:text-white font-black">Martinez</span>
+                <a href="/" class="flex items-center focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">
+                    <span class="self-center text-xl whitespace-nowrap dark:text-white font-black ">Martinez</span>
                 </a>
                 <div class="flex md:order-2">
                     <button id="reserve-button"  type="button" class="hidden text-white bg-orange-500 font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-slate-200 ease-in-out duration-200" data-bs-toggle="modal" data-bs-target="#reserve-modal">Reserve now</button>
@@ -16,23 +16,30 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg" aria-current="page">Home</a>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg focus:outline-orange-500 focus:outline-none duration-200 ease-in-out" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">About</a>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">About</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">Services</a>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Services</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 ease-in-out duration-200">Contact</a>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Contact</a>
                     </li>
                     </ul>
                 </div>
                 </div>
             </nav>
+            <div class="fixed right-6 bottom-[6.5em] group z-50">
+                <button id="reserve-list-button" type="button" class="flex justify-center items-center w-16 h-16 text-orange-500 bg-white rounded-full hover:bg-slate-200 focus:ring-4 hover:font-bold focus:ring-orange-500 focus:outline-none duration-200 ease-in-out drop-shadow-md" data-bs-toggle="modal" data-bs-target="#reserve-list-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd" />
+                </svg>
+                </button>
+            </div>
             <div class="fixed right-6 bottom-6 group z-50">
-                <button id="scroll-to-top" type="button" class="flex justify-center opacity-0 items-center w-16 h-16 text-orange-500 bg-white rounded-full hover:bg-slate-100 focus:ring-4 hover:font-bold focus:ring-blue-300 focus:outline-none duration-200 ease-in-out drop-shadow-md">
+                <button id="scroll-to-top" type="button" class="flex justify-center items-center w-16 h-16 text-orange-500 bg-white rounded-full hover:bg-slate-200 focus:ring-4 hover:font-bold focus:ring-orange-500 focus:outline-none duration-200 ease-in-out drop-shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
                 </svg>
@@ -79,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="block my-auto">
-                                <button class="text-white bg-orange-500  font-bold rounded-full text-sm p-3 md:px-5 md:py-[1em] text-center mr-0 hover:bg-orange-400 ease-in-out duration-200" data-bs-toggle="modal" data-bs-target="#reserve-modal">
+                                <button class="text-white bg-orange-500  font-bold rounded-full text-sm p-3 md:px-5 md:py-[1em] text-center mr-0 hover:bg-orange-400 focus:bg-orange-600 focus:outline-none duration-200 ease-in-out" data-bs-toggle="modal" data-bs-target="#reserve-modal">
                                     <p class="hidden md:block">Reserve Now</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="block md:hidden w-6 h-6">
                                     <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
@@ -90,6 +97,99 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="reserve-list-modal" tabindex="-1" aria-modal="true" role="dialog">
+                <div class="modal-dialog modal-xl modal-dialog-centered relative w-auto pointer-events-none">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                    <div class="modal-header text-start flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+                        <h5 class="text-xl text-center font-medium leading-normal text-orange-500" >
+                        Martinez 
+                        </h5>
+                        <button type="button"data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                        </svg>
+                        </button>
+                    </div>
+                    <div class="modal-header text-center flex flex-shrink-0 items-center justify-center py-[1.5em] rounded-t-md">
+                        <h5 class="text-2xl font-bold leading-normal text-gray-800" >
+                            Swimming Pool Waiting List
+                        </h5>
+                    </div>
+                    <div class="modal-body relative px-4 pb-4">
+                        <div class="flex flex-col border-2 rounded-lg px-[2em]">
+                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                            <div class="overflow-hidden">
+                                @if((count($reservations) > 0))
+                                <table class="min-w-full">
+                                <thead class="bg-white border-b">
+                                    <tr>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Name
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Adress
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Reservation Date
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Reservation Time Start
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Reservation Time End
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Status
+                                    </th>
+                                    </tr>
+                                </thead>
+                                @foreach ($reservations as $reservation)
+                                    @if($reservation->status == 0 || $reservation->status == 1 || $reservation->status == 2 || $reservation->status == 3)
+                                    <tbody>
+                                        <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $reservation->nama }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $reservation->alamat }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $reservation->tanggal_reservasi }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $reservation->jam_reservasi_mulai }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $reservation->jam_reservasi_selesai }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            @if ($reservation->status == 0)
+                                            <span class="px-4 py-1 rounded-full text-gray-500 bg-gray-200 text-center font-light text-sm flex align-center justify-center w-full active:bg-gray-300 transition duration-300 ease">Unconfirmed</span>
+                                            @elseif ($reservation->status == 1)
+                                            <span class="px-4 py-1 rounded-full text-green-500 bg-green-200 text-center font-light text-sm flex align-center justify-center w-full active:bg-gray-300 transition duration-300 ease">Confirmed</span>
+                                            @elseif ($reservation->status == 2)
+                                            <span class="px-4 py-1 rounded-full text-red-500 bg-red-200 text-center font-light text-sm flex align-center justify-center w-full active:bg-gray-300 transition duration-300 ease">Rejected</span>
+                                            @endif
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                    @endif
+                                @endforeach
+                                </table>
+                                @else
+                                <div class="flex justify-center items-center">
+                                <h1 class="text-2xl font-bold text-gray-500 text-center">No Reservation</h1>
+                                </div>
+                                @endif
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
                 <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="reserve-modal" tabindex="-1" aria-modal="true" role="dialog">
                 <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
@@ -153,7 +253,7 @@
                     </div>
                     </div>
                 </div>
-    </div>
+                </div>
         <div id="admin-login-modal" class="fixed inset-0 bg-gray-700 bg-opacity-80 transition-opacity hidden z-50">
         <div class="fixed inset-0 overflow-y-auto">
             <div class="flex min-h-full justify-center p-0 text-left items-center">
@@ -209,11 +309,24 @@
             </div>
             <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header flex items-center justify-between p-4">
-                    <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <h5 class="offcanvas-title mb-0 leading-normal text-lg font-bold text-orange-500" id="offcanvasRightLabel">Martinez</h5>
                     <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-                    ...
+                    <div class="w-full h-auto block mt-[1em]">
+                        <a href="">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Home</button>
+                        </a>
+                        <a href="">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">About</button>
+                        </a>
+                        <a href="">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Services</button>
+                        </a>
+                        <a href="">
+                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Contact</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </body>
@@ -241,16 +354,17 @@
                     $('#reserve-button').addClass('hidden');
                 }
 
-                if ($(this).scrollTop() > 100) {
-                    $('#scroll-to-top').removeClass('opacity-0');
-                    $('#scroll-to-top').addClass('opacity-100');
-                } else {
-                    $('#scroll-to-top').removeClass('opacity-100');
-                    $('#scroll-to-top').addClass('opacity-0');
-                }
+                // if ($(this).scrollTop() > 100) {
+                //     $('#scroll-to-top').removeClass('opacity-0');
+                //     $('#scroll-to-top').addClass('opacity-100');
+                    
+                // } else {
+                //     $('#scroll-to-top').removeClass('opacity-100');
+                //     $('#scroll-to-top').addClass('opacity-0');
+                // }
             });
             $(document).on('keypress', function(e) {
-                if (e.shiftKey && e.keyCode == 65) {
+                if (e.shiftKey && e.keyCode == 13) {
                     e.preventDefault();
                     // $('#admin-login-modal').show();
                     // $("body").addClass("overflow-hidden");

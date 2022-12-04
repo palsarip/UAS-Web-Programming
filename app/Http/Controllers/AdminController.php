@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\Reservation;
 use App\Models\History;
+use Illuminate\Routing\Route;
 
 class AdminController extends Controller
 {
@@ -102,7 +103,7 @@ class AdminController extends Controller
     function destroy($id){
         $reservation = Reservation::find($id);
         $reservation->delete();
-        return redirect('admin/reservations')->with('success', 'Reservation from' . $reservation->nama . ' has been deleted');
+        return redirect(Route::current())->with('success', 'Reservation from' . $reservation->nama . ' has been deleted');
     }
 }
 
