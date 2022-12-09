@@ -46,7 +46,7 @@
                 </div>
                 <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
                     <div class="w-full h-auto block mt-[1em]">
-                      @if(Route::is('admin.dashboard'))
+                      <!-- @if(Route::is('admin.dashboard'))
                         <a href="dashboard">
                             <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Dashboard</button>
                         </a>
@@ -54,7 +54,7 @@
                         <a href="dashboard">
                             <button class="w-full h-auto flex justify-center py-2 text-gray-400 text-xl font-semibold">Dashboard</button>
                         </a>
-                      @endif
+                      @endif -->
                       @if(Route::is('admin.reservations'))
                         <a href="reservations">
                             <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Reservations</button>
@@ -109,7 +109,7 @@
                     <span class="mt-2 text-md font-semibold text-center">{{Auth::user()->name}}</span>
                   </a>
                 </li>
-                <li class="mt-[1.5em] w-full p-1 mb-[0.75em] hover:bg-slate-100 rounded">
+                <!-- <li class="mt-[1.5em] w-full p-1 mb-[0.75em] hover:bg-slate-100 rounded">
                   @if(Route::is('admin.dashboard'))
                     <a href="dashboard" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
                       <div class="shadow-soft-2xl mr-1 flex items-center justify-center stroke-0 text-center ">
@@ -131,8 +131,8 @@
                       <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
                     </a>
                   @endif
-                </li>
-                <li class="w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
+                </li> -->
+                <li class="mt-[1.5em] w-full p-1 mb-[0.5em] hover:bg-slate-100 rounded">
                   @if(Route::is('admin.reservations'))
                     <a href="reservations" class="w-full py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-orange-500 cursor-pointer">
                       <div class="shadow-soft-2xl mr-1 flex items-center justify-center rounded-l bg-center stroke-0 text-center">

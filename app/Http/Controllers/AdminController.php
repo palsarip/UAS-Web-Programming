@@ -13,7 +13,7 @@ class AdminController extends Controller
 {
     function index(){
         if(Auth::check()){
-            return redirect('admin/dashboard');
+            return redirect('admin/reservations');
         }else{
             return view('admin.index');
         }
@@ -22,8 +22,8 @@ class AdminController extends Controller
     function dashboard(){
         if(Auth::check()){
             $reservations = Reservation::all();
-            return view('admin/dashboard')->with('reservations', $reservations);
-            return view('admin/dashboard');
+            return view('admin/reservations')->with('reservations', $reservations);
+            return view('admin/reservations');
         }else{
             return redirect('admin')->with('errors', "You must be logged in to access this page");
         }
@@ -75,7 +75,7 @@ class AdminController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-            return redirect('admin/dashboard')->with('success', 'Welcome, ' . Auth::user()->name);
+            return redirect('admin/reservations')->with('success', 'Welcome, ' . Auth::user()->name);
         } else {
             return back()->with('errors', 'Username or password is incorrect');
         }
