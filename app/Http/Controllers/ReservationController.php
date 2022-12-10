@@ -36,7 +36,15 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
+        
+        $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required|max:3|min:1',
+            'tanggal_reservasi' => 'required',
+            'jam_reservasi_mulai' => 'required',
+            'jam_reservasi_selesai' => 'required'
+        ]);
 
         Reservation::create([
             'nama' => $request->nama,
@@ -54,7 +62,17 @@ class ReservationController extends Controller
             'jam_reservasi_selesai' => $request->jam_reservasi_selesai
         ]);
 
-        return redirect('/')->with('success', 'Reservation created successfully');
+        if($request->alamat > 3){
+            return redirect('/')->with('error', "Address can't be more than 3 characters");
+
+        }
+        elseif($request->alamat < 1){
+            return redirect('/')->with('error', "Address can't be less than 1 characters");
+
+        }
+        else{
+            return redirect('/')->with('success', 'Reservation created successfully');
+        }
     }
 
     /**

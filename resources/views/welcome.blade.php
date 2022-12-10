@@ -83,8 +83,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="hidden md:block text-md">Open at 6AM - 5PM</p>
-                                    <p class="block md:hidden text-md">6AM - 5PM</p>
+                                    <p class="hidden md:block text-md">Open at 6AM - 8PM</p>
+                                    <p class="block md:hidden text-md">6AM - 8PM</p>
                                 </div>
                             </div>
                             <div class="block my-auto">
