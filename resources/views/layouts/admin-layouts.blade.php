@@ -19,11 +19,9 @@
             }
         </style>
 
-        <!-- Tailwind CSS -->
-        @vite('resources/css/app.css')
-
-        <!-- Jquery -->
+        <!-- Tailwnd CSS & Jquery -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     </head>
     <body class="antialiased h-full bg-slate-50">
     <nav id="navbar" class="flex lg:hidden bg-white px-[1.5em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-[1em] md:py-2.5 fixed w-full top-0 left-0 ease-in-out duration-500 z-50 shadow-md">

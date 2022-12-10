@@ -19,11 +19,9 @@
             }
         </style>
 
-        <!-- Tailwind CSS -->
-        @vite('resources/css/app.css')
-
-        <!-- Jquery -->
+        <!-- Tailwnd CSS & Jquery -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        
     </head>
     <body>
         @include('sweetalert::alert')

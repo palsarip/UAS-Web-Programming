@@ -1,7 +1,36 @@
 {
+  "public/martinez-swimming-pool.jpg": {
+    "file": "assets/martinez-swimming-pool.262d84dc.jpg",
+    "src": "public/martinez-swimming-pool.jpg"
+  },
+  "public/playground.jpg": {
+    "file": "assets/playground.d2a136cc.jpg",
+    "src": "public/playground.jpg"
+  },
+  "public/clubhouse-table.jpg": {
+    "file": "assets/clubhouse-table.27eb03ba.jpg",
+    "src": "public/clubhouse-table.jpg"
+  },
+  "public/martinez-clubhouse.jpg": {
+    "file": "assets/martinez-clubhouse.60b9734f.jpg",
+    "src": "public/martinez-clubhouse.jpg"
+  },
+  "public/sky2.jpg": {
+    "file": "assets/sky2.cde275a6.jpg",
+    "src": "public/sky2.jpg"
+  },
+  "public/martinez-house.png": {
+    "file": "assets/martinez-house.9c27aecb.png",
+    "src": "public/martinez-house.png"
+  },
   "resources/js/app.js": {
     "file": "assets/app.03c55ea1.js",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.ff7b4077.css",
+    "src": "resources/css/app.css",
     "isEntry": true
   }
 }
