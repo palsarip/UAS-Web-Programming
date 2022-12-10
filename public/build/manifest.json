@@ -3,13 +3,13 @@
     "file": "assets/martinez-swimming-pool.262d84dc.jpg",
     "src": "public/martinez-swimming-pool.jpg"
   },
-  "public/playground.jpg": {
-    "file": "assets/playground.d2a136cc.jpg",
-    "src": "public/playground.jpg"
-  },
   "public/clubhouse-table.jpg": {
     "file": "assets/clubhouse-table.27eb03ba.jpg",
     "src": "public/clubhouse-table.jpg"
+  },
+  "public/playground.jpg": {
+    "file": "assets/playground.d2a136cc.jpg",
+    "src": "public/playground.jpg"
   },
   "public/martinez-clubhouse.jpg": {
     "file": "assets/martinez-clubhouse.60b9734f.jpg",
