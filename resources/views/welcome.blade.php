@@ -46,8 +46,10 @@
                 </button>
             </div>
             <section class="relative w-full h-[120vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh]"></section>
-            <div class="absolute top-0 left-0 w-full h-[115vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh] bg-cover z-10 bg-[url('/public/sky2.jpg')]"></div>
-            <div class="absolute mt-[40vw] md:mt-[35vw] lg:mt-[65vh] xl:mt-[80vh] top-0 left-0 w-full h-[100vh] md:h-[100vw] lg:h-[100vh] xl:h-[135vh] bg-contain bg-no-repeat bg-bottom lg:bg-cover z-30 bg-[url('/public/martinez-house.png')]"></div>
+            <!-- <img src="{{ asset('sky2.jpg') }}" alt="" class="absolute top-0 left-0 w-full h-[115vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh] bg-cover z-10"> -->
+            <!-- <img src="{{ asset('martinez-house.png') }}" alt="" class="absolute mt-[40vw] md:mt-[35vw] lg:mt-[65vh] xl:mt-[80vh] top-0 left-0 w-full h-[100vh] md:h-[100vw] lg:h-[100vh] xl:h-[135vh] bg-contain bg-no-repeat bg-bottom lg:bg-cover z-30"> -->
+            <div class="absolute top-0 left-0 w-full h-[115vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh] bg-cover z-10 bg-[url({{ asset('sky2.jpg') }})]"></div>
+            <div class="absolute mt-[40vw] md:mt-[35vw] lg:mt-[65vh] xl:mt-[80vh] top-0 left-0 w-full h-[100vh] md:h-[100vw] lg:h-[100vh] xl:h-[135vh] bg-contain bg-no-repeat bg-bottom lg:bg-cover z-30 bg-[url({{ asset('martinez-house.png') }})]"></div>
             <div class="absolute top-0 w-full h-full mt-[2em]">
                 <div class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-50 lg:z-20">
                     <div class="mt-[7em] pt-[4em]">
@@ -265,7 +267,7 @@
             </div>
             <div class="w-full h-auto bg-gray-50 py-[10em] px-[1.5em] xl:px-[11.5em] lg:px-[5em] md:px-[2em]">
                 <div class="w-full h-full block md:flex justify-between align-center my-[3em]">
-                    <div class=" w-full md:w-[85%] lg:w-[95%] xl:w-[85%] h-[20vh] md:h-[70vh] mb-[1em] md:mb-0 md:mr-[1em] lg:mr-[2em] bg-cover bg-no-repeat bg-[url('/public/martinez-swimming-pool.jpg')]"></div>
+                    <div class=" w-full md:w-[85%] lg:w-[95%] xl:w-[85%] h-[20vh] md:h-[70vh] mb-[1em] md:mb-0 md:mr-[1em] lg:mr-[2em] bg-cover bg-no-repeat bg-[url({{ asset('martinez-swimming-pool.jpg') }})]"></div>
                     <div class="w-full h-auto ml-0 md:ml-2 lg:ml-8 my-auto md:overflow-y-auto ">
                         <div>
                         <h5 class="w-full md:w-[75%] text-black mt-[3em] md:mt-0 text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight font-black mb-[0.5em] text-center md:text-left">Improve your <br> life quality with martinez</h5>
@@ -288,11 +290,11 @@
                     </div>
                 </div>
                 <div class="w-full h-full flex justify-between my-[5em] overflow-x-auto">
-                    <div class="w-full h-[40vh] bg-[url('/public/martinez-clubhouse.jpg')] bg-cover bg-no-repeat"></div>
-                    <div class="w-full h-[40vh] bg-[url('/public/clubhouse-table.jpg')] bg-cover bg-no-repeat mx-[2em]"></div>
-                    <div class="w-full h-[40vh] bg-[url('/public/playground.jpg')] bg-cover bg-no-repeat bg-center"></div>
+                    <div class="w-full h-[40vh] bg-[url({{ asset('martinez-clubhouse.jpg') }})] bg-cover bg-no-repeat"></div>
+                    <div class="w-full h-[40vh] bg-[url({{ asset('clubhouse-table.jpg') }})] bg-cover bg-no-repeat mx-[2em]"></div>
+                    <div class="w-full h-[40vh] bg-[url({{ asset('playground.jpg') }})] bg-cover bg-no-repeat bg-center"></div>
                 </div>
-                <div class="w-full h-[85vh] block md:flex justify-center my-[3em] bg-[url('/public/martinez-clubhouse.jpg')] bg-cover bg-no-repeat"></div>
+                <div class="w-full h-[85vh] block md:flex justify-center my-[3em] bg-[url({{ asset('martinez-clubhouse.jpg') }})] bg-cover bg-no-repeat"></div>
             </div>
         </div>
         <footer class="lg:mt-[10em] text-center lg:text-left bg-orange-500 text-white">
