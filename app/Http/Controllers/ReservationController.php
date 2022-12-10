@@ -70,6 +70,15 @@ class ReservationController extends Controller
             return redirect('/')->with('error', "Address can't be less than 1 characters");
 
         }
+        elseif($request->tanggal_reservasi < now()){
+            return redirect('/')->with('error', 'Reservation date can not be less than today');
+        }
+        elseif($request->jam_reservasi_mulai > $request->jam_reservasi_selesai){
+            return redirect('/')->with('error', 'Reservation time start can not be more than reservation time end');
+        }
+        elseif($request->jam_reservasi_mulai == $request->jam_reservasi_selesai){
+            return redirect('/')->with('error', 'Reservation time start can not be the same as reservation time end');
+        }
         else{
             return redirect('/')->with('success', 'Reservation created successfully');
         }
