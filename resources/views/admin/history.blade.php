@@ -3,7 +3,7 @@
   <div class="max-h-[75vh]">
     <p class="text-3xl font-bold my-2 text-orange-500">History</p>
     <hr class="border-2 bg-black opacity-1 rounded-full my-2 mb-[2em]">
-    <div class="flex flex-col border-2 rounded-lg px-[2em]">
+    <div class="flex flex-col border-2 rounded-lg px-[2em] max-h-[75vh]">
       <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
           <div class="overflow-hidden">
