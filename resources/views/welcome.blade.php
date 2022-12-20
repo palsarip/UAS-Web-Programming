@@ -305,7 +305,9 @@
                         <h5 class="w-full md:w-[75%] text-black mt-[3em] md:mt-0 text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight font-black mb-[0.5em] text-center md:text-left">Improve your <br> life quality with martinez</h5>
                         </div>
                         <div class="text-sm md:text-md xl:text-lg text-black mt-[3em] md:mt-0 font-thin text-center md:text-justify ">                           
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta, voluptate vitae accusamus a delectus eveniet dolore hic sequi, earum voluptatum modi similique accusantium enim repellat amet debitis culpa doloremque ratione? Ab quam quod similique voluptatum iste. Odit ipsum pariatur eos ad repudiandae explicabo hic. Optio assumenda fugiat animi magni inventore, quisquam corporis expedita quo fuga iste officiis possimus sapiente quibusdam veritatis eum modi itaque!
+                        Martinez Swimming Pool and Clubhouse is present as part of the privileges for residents of the Cluster Martinez,
+ spend your free time with your family enjoying the calm sensation of swimming in the exclusive pool that is presented every day.
+Hurry up and make a reservation right now on this website! 
                         </div>
                     </div>
                 </div>
@@ -318,7 +320,7 @@
                         <h5 class="w-full text-black text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center md:text-left">Explore Our Pool</h5>
                     </div>
                     <div class="w-full md:w-[40%] text-center">
-                        <h5 class="text-sm md:text-md xl:text-lg text-black mt-[2.5em] md:mt-0 font-thin text-center md:text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo excepturi magnam sed harum fuga sapiente, dolor itaque distinctio voluptate.</h5>
+                        <h5 class="text-sm md:text-md xl:text-lg text-black mt-[2.5em] md:mt-0 font-thin text-center md:text-right">We love our residential design and build projects - big and small! From full builds, scenery, activites all for your quality life.</h5>
                     </div>
                 </div>
                 <div class="w-full h-full flex justify-between my-[5em] overflow-x-auto">
