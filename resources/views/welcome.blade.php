@@ -4,7 +4,7 @@
             <nav id="navbar" class="bg-transparent px-[1.5em] xl:px-[11.5em] lg:px-[5em] md:px-[2em] py-2.5 absolute w-full top-0 left-0 ease-in-out duration-500 z-50">
                 <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="/" class="flex items-center focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">
-                    <span class="self-center text-xl whitespace-nowrap dark:text-white font-black ">Martinez</span>
+                    <span class="self-center text-xl whitespace-nowrap text-white font-black ">Martinez</span>
                 </a>
                 <div class="flex md:order-2">
                     <button id="reserve-button"  type="button" class="hidden text-white bg-orange-500 font-bold rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-slate-200 ease-in-out duration-200" data-bs-toggle="modal" data-bs-target="#reserve-modal">Reserve now</button>
