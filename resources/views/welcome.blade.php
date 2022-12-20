@@ -13,16 +13,48 @@
                             <svg class="w-6 h-6 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                         </button>
                 </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <div class="items-center justify-between hidden w-full xl:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg focus:outline-orange-500 focus:outline-none duration-200 ease-in-out" aria-current="page">Home</a>
+                        <a id="scroll-to-top-xl" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">About</a>
+                        <a id="scroll-to-about-xl" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">About</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Services</a>
+                        <a id="scroll-to-services-xl" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">Services</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Contact</a>
+                    </li> -->
+                    </ul>
+                </div>
+                <div class="items-center justify-between hidden w-full lg:flex xl:hidden md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
+                    <li>
+                        <a id="scroll-to-top-lg" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a id="scroll-to-about-lg" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">About</a>
+                    </li>
+                    <li>
+                        <a id="scroll-to-services-lg" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">Services</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Contact</a>
+                    </li> -->
+                    </ul>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex lg:hidden md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 mt-4 borderrounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
+                    <li>
+                        <a id="scroll-to-top-md" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 text-lg focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a id="scroll-to-about-md" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">About</a>
+                    </li>
+                    <li>
+                        <a id="scroll-to-services-md" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out cursor-pointer">Services</a>
                     </li>
                     <!-- <li>
                         <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 opacity-50 text-lg hover:opacity-100 focus:outline-orange-500 focus:outline-none duration-200 ease-in-out">Contact</a>
@@ -51,12 +83,12 @@
             <div class="absolute top-0 left-0 w-full h-[115vh] md:h-[135vw] lg:h-[165vh] xl:h-[215vh] bg-cover z-10 bg-[url({{ asset('sky2.jpg') }})]"></div>
             <div class="absolute mt-[40vw] md:mt-[35vw] lg:mt-[65vh] xl:mt-[80vh] top-0 left-0 w-full h-[100vh] md:h-[100vw] lg:h-[100vh] xl:h-[135vh] bg-contain bg-no-repeat bg-bottom lg:bg-cover z-30 bg-[url({{ asset('martinez-house.png') }})]"></div>
             <div class="absolute top-0 w-full h-full mt-[2em]">
-                <div class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-50 lg:z-20">
+                <div id="home" class="hero-section w-full h-0 relative lg:sticky top-0 px-[1em] xl:px-[11.5em] z-50 lg:z-20">
                     <div class="mt-[7em] pt-[4em]">
                         <h1 class="xl:text-7xl lg:text-5xl md:text-5xl text-5xl font-black text-center text-white"><span class="">Martinez</span> swimming pool</h1>
                     </div>
                     <div class="py-[1em] md:py-[2.5em] xl:px-[15em] lg:px-[12.5em] md:px-[6em]">
-                        <p class="text-md md:text-md text-center text-white">Martinez Swimming Pool </p>
+                        <p class="text-md md:text-md text-center text-white">Let's improve your quality of life by swimming in the Martinez pool! </p>
                     </div>
                     <div class="flex justify-center"><div>
                         </div>
@@ -72,7 +104,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-md">Location</p>
+                                    <p class="text-md">Martinez Clubhouse</p>
                                 </div>
                             </div>
                             <div class="block my-auto justify-between">
@@ -100,9 +132,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="reserve-list-modal" tabindex="-1" aria-modal="true" role="dialog">
+                <div class= "modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="reserve-list-modal" tabindex="-1" aria-modal="true" role="dialog">
                 <div class="modal-dialog modal-xl modal-dialog-centered relative w-auto pointer-events-none">
-                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current ">
                     <div class="modal-header text-start flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
                         <h5 class="text-xl text-center font-medium leading-normal text-orange-500" >
                         Martinez 
@@ -122,9 +154,9 @@
                         <div class="flex flex-col border-2 rounded-lg px-[2em]">
                         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                             <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
+                            <div class="overflow-auto max-h-[50vh]">
                                 @if((count($reservations) > 0))
-                                <table class="min-w-full">
+                                <table class="min-w-full ">
                                 <thead class="bg-white border-b">
                                     <tr>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
@@ -149,7 +181,7 @@
                                 </thead>
                                 @foreach ($reservations as $reservation)
                                     @if($reservation->status == 0 || $reservation->status == 1 || $reservation->status == 2 || $reservation->status == 3)
-                                    <tbody>
+                                    <tbody class="">
                                         <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $reservation->nama }}
@@ -378,13 +410,13 @@
                     Navigation
                     </h6>
                     <p class="mb-4">
-                    <a href="#!" class="text-white">Home</a>
+                    <a id="scroll-to-top" class="text-white cursor-pointer">Home</a>
                     </p>
                     <p class="mb-4">
-                    <a href="#!" class="text-white">About</a>
+                    <a id="scroll-to-about" class="text-white cursor-pointer">About</a>
                     </p>
                     <p class="mb-4">
-                    <a href="#!" class="text-white">Services</a>
+                    <a id="scroll-to-services"class="text-white cursor-pointer">Services</a>
                     </p>
                 </div>
                 <div class="">
@@ -418,23 +450,27 @@
             </div> -->
             </footer>
             <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header flex items-center justify-between p-4">
+                <div class="offcanvas-header flex items-center align-center justify-between p-4">
                     <h5 class="offcanvas-title mb-0 leading-normal text-lg font-bold text-orange-500" id="offcanvasRightLabel">Martinez</h5>
-                    <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </button>
                 </div>
                 <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
                     <div class="w-full h-auto block mt-[1em]">
-                        <a href="">
+                        <a id="scroll-to-top">
                             <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Home</button>
                         </a>
-                        <a href="">
+                        <a id="scroll-to-about-md"
                             <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">About</button>
                         </a>
-                        <a href="">
+                        <a id="scroll-to-services-md">
                             <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Services</button>
                         </a>
-                        <a href="">
-                            <button class="w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Contact</button>
+                        <a href="admin">
+                            <button class="absolute bottom-0 left-0 right-0 mb-[3.5vh] w-full h-auto flex justify-center py-2 text-orange-500 text-xl font-semibold">Admin</button>
                         </a>
                     </div>
                 </div>
@@ -486,8 +522,39 @@
                 $('#admin-login-modal').hide();
                 $("body").removeClass("overflow-hidden");
             });
+
             $(document).on('click', '#scroll-to-top', function(e) {
                 window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+           
+            $(document).on('click', '#scroll-to-top-xl', function(e) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-about-xl', function(e) {
+                window.scrollTo({top: 1900, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-services-xl', function(e) {
+                window.scrollTo({top: 2800, behavior: 'smooth'});
+            });
+
+            $(document).on('click', '#scroll-to-top-lg', function(e) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-about-lg', function(e) {
+                window.scrollTo({top: 1550, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-services-lg', function(e) {
+                window.scrollTo({top: 2400, behavior: 'smooth'});
+            });
+
+            $(document).on('click', '#scroll-to-top-md', function(e) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-about-md', function(e) {
+                window.scrollTo({top: 1350, behavior: 'smooth'});
+            });
+            $(document).on('click', '#scroll-to-services-md', function(e) {
+                window.scrollTo({top: 2150, behavior: 'smooth'});
             });
         </script>
     </html>

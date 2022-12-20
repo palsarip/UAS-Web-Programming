@@ -13,6 +13,9 @@
 
         <!-- Styles -->
         <style>
+            html{
+                scroll-behavior: smooth;
+            }
             body {
                 /* font-family: 'Nunito', sans-serif; */
                 font-family: 'Plus Jakarta Sans', sans-serif;

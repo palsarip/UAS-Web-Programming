@@ -32,7 +32,7 @@
                             <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-extrabold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-600 sm:ml-3 sm:w-auto sm:text-sm hover:bg-orange-600 transition duration-150 ease-in-out">Login</button>
                             <a href="/">
                                 <button type="button"
-                                class="inline-flex w-full justify-center rounded-md bg-white border border-orange-500 px-4 py-2 text-base font-extrabold text-orange-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-600 sm:ml-3 sm:w-auto sm:text-sm hover:bg-orange-500 transition duration-150 ease-in-out hover:text-white">Back</button>
+                                class="inline-flex w-full mt-[0.5em] justify-center rounded-md bg-white border border-orange-500 px-4 py-2 text-base font-extrabold text-orange-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-600 sm:ml-3 sm:w-auto sm:text-sm hover:bg-orange-500 transition duration-150 ease-in-out hover:text-white">Back</button>
                             </a>
                         <!-- </a> -->
                     </div>
